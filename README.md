@@ -84,7 +84,7 @@ https://vpic.nhtsa.dot.gov/api/
 Клонировать проект:
 
 ```
-git clone https://github.com/your-username/vin-decoder
+git clone https://github.com/Vazgen/vin-decoder
 ```
 
 Установить зависимости:

@@ -66,7 +66,6 @@ https://vpic.nhtsa.dot.gov/api/
 * Vite
 * React Router
 * Fetch API
-* Чистый CSS без фреймворков
 
 ---
 
@@ -74,7 +73,6 @@ https://vpic.nhtsa.dot.gov/api/
 
 * Минималистичный интерфейс
 * Адаптив: 420px – 1440px
-* Без UI-фреймворков
 * Семантическая разметка
 
 ---

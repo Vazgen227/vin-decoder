@@ -1,0 +1,238 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeInDown 0.6s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: #daa520;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(218, 165, 32, 0.3);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #999;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.searchSection {
+  background: linear-gradient(145deg, #141414 0%, #1a1a1a 100%);
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow:
+    0 0 0 1px rgba(218, 165, 32, 0.2),
+    0 10px 40px rgba(0, 0, 0, 0.6);
+  margin-bottom: 40px;
+  animation: fadeInUp 0.6s ease 0.2s both;
+  border-left: 4px solid #daa520;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inputWrapper {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.input {
+  width: 100%;
+  padding: 20px 24px;
+  font-size: 24px;
+  font-weight: 700;
+  border: 2px solid #2a2a2a;
+  border-radius: 2px;
+  font-family: "SF Mono", "Monaco", "Courier New", monospace;
+  transition: all 0.3s ease;
+  background: #0f0f0f;
+  color: #e8e8e8;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.input::placeholder {
+  color: #555;
+  text-transform: none;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #daa520;
+  background: #121212;
+  box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.1);
+}
+
+.decodeButton {
+  width: 100%;
+  padding: 20px 32px;
+  background: linear-gradient(135deg, #daa520 0%, #b8860b 100%);
+  color: #000;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 20px rgba(218, 165, 32, 0.4);
+}
+
+.decodeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(218, 165, 32, 0.6);
+  background: linear-gradient(135deg, #ffd700 0%, #daa520 100%);
+}
+
+.decodeButton:active {
+  transform: translateY(0);
+}
+
+.decodeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.statusMessage {
+  margin-top: 20px;
+  padding: 16px 24px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.loading {
+  background: rgba(218, 165, 32, 0.1);
+  color: #daa520;
+  border-left: 4px solid #daa520;
+}
+
+.error {
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  border-left: 4px solid #dc2626;
+}
+
+.success {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border-left: 4px solid #22c55e;
+}
+
+.resultsSection {
+  animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+.historySection {
+  animation: fadeInUp 0.6s ease 0.5s both;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 16px;
+  }
+
+  .title {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .searchSection {
+    padding: 24px;
+  }
+
+  .input {
+    font-size: 18px;
+    padding: 16px 20px;
+    letter-spacing: 2px;
+  }
+
+  .input::placeholder {
+    font-size: 14px;
+  }
+
+  .decodeButton {
+    padding: 16px 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 30px 12px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .searchSection {
+    padding: 20px;
+  }
+
+  .input {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+}

@@ -1,0 +1,93 @@
+.container {
+  background: linear-gradient(145deg, #141414 0%, #1a1a1a 100%);
+  padding: 32px;
+  border-radius: 4px;
+  box-shadow:
+    0 0 0 1px rgba(218, 165, 32, 0.2),
+    0 10px 40px rgba(0, 0, 0, 0.6);
+  border-left: 4px solid #daa520;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #daa520;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.historyButton {
+  padding: 14px 24px;
+  background: #0f0f0f;
+  color: #e8e8e8;
+  border: 1px solid #2a2a2a;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "SF Mono", "Monaco", "Courier New", monospace;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.historyButton:hover {
+  background: #1a1a1a;
+  border-color: #daa520;
+  color: #daa520;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(218, 165, 32, 0.2);
+}
+
+.historyButton:active {
+  transform: translateY(0);
+}
+
+.empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #555;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .container {
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .historyButton {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    padding: 20px;
+  }
+
+  .list {
+    gap: 8px;
+  }
+
+  .historyButton {
+    padding: 10px 16px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { decodeVIN } from "../utils/api";
 import VinResults from "../components/VinResults";
 import VinHistory from "../components/VinHistory";
@@ -8,9 +8,15 @@ function HomePage() {
   const [vin, setVin] = useState("");
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
-  const [history, setHistori] = useState([]);
+  const [history, setHistori] = useState(() =>{
+    const saved = localStorage.getItem('vin_history')
+    return saved ? JSON.parse(saved) : []
+  });
   const [loading, setLoading] = useState(false);
 
+  useEffect(() =>{
+    localStorage.setItem('vin_history', JSON.stringify(history));
+  }, [history])
   async function handleDecode(customVin) {
     const vinToUse = customVin || vin;
     const error = validateVin(vinToUse);

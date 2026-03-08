@@ -1,3 +1,4 @@
+/* VariableDetailPage.module.css */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -5,11 +6,61 @@
   min-height: 100vh;
 }
 
+.backButton {
+  padding: 14px 28px;
+  background: #0f0f0f;
+  color: #daa520;
+  border: 1px solid #2a2a2a;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.backButton:hover {
+  background: #1a1a1a;
+  border-color: #daa520;
+  transform: translateX(-4px);
+  box-shadow: 0 4px 16px rgba(218, 165, 32, 0.2);
+}
+
+.backList{
+  padding: 14px 28px;
+  background: #0f0f0f;
+  color: #daa520;
+  border: 1px solid #2a2a2a;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+  display: block;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;  
+}
+
+.backList:hover{
+  background: #1a1a1a;
+  border-color: #daa520;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(218, 165, 32, 0.2);
+}
+
 .card {
   background: linear-gradient(145deg, #141414 0%, #1a1a1a 100%);
   padding: 48px;
   border-radius: 4px;
-  box-shadow:
+  box-shadow: 
     0 0 0 1px rgba(218, 165, 32, 0.2),
     0 10px 40px rgba(0, 0, 0, 0.6);
   border-left: 4px solid #daa520;
@@ -56,7 +107,10 @@
 }
 
 .notFound {
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   padding: 100px 20px;
   font-size: 18px;
   color: #555;
@@ -82,6 +136,11 @@
   .description {
     font-size: 15px;
   }
+
+  .backButton {
+    padding: 12px 24px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -99,5 +158,10 @@
 
   .description {
     font-size: 14px;
+  }
+
+  .backButton {
+    padding: 10px 20px;
+    font-size: 11px;
   }
 }

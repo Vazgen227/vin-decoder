@@ -13,4 +13,10 @@ function validateVin(vin) {
   }
 }
 
-export { validateVin };
+function stripHtmlTags(text){
+const regex = /<[^>]*>/g;
+
+return text.replace(regex, '')
+}
+
+export { validateVin, stripHtmlTags};
